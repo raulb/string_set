@@ -9,7 +9,7 @@ class StringSet
   end
 
   def empty?
-    true
+    self.size.zero?
   end
 
   def add *strings
@@ -27,9 +27,9 @@ class StringSet
   end
 
   def == set
-    return false unless @array.size == set.size
+    return false unless self.size == set.size
 
-    @array.all? do |element|
+    self.all? do |element|
       set.include?(element)
     end
   end
